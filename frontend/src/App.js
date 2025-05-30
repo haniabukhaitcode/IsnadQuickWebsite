@@ -7,13 +7,13 @@ function App() {
 
   useEffect(() => {
     axios.get('http://localhost:5000/api')
-      .then(response => {
-        setMessage(response.data.message);
-        setLoading(false);
+      .then(res => {
+        setMessage(res.data.message);
+        setLoading(false); //if data recieved no loading.
       })
       .catch(error => {
         console.error('Error fetching data:', error);
-        setLoading(false);
+        setLoading(false); //if Error caught no loading.
       });
   }, []);
 
