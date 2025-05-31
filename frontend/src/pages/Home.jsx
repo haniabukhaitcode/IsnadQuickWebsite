@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const apps = [
   {
@@ -39,49 +38,53 @@ const team = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <img 
-            src="/logo.svg" 
-            alt="ISNAD Logo" 
-            className="h-24 mx-auto mb-6"
-          />
-          <h1 className="text-5xl font-bold mb-4">Stand Against Media Deception</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            ISNAD empowers truth-seekers with tools to expose and counter false narratives
-          </p>
-        </div>
+      <section className="bg-primary text-white text-center py-5 rounded">
+        <img
+          src="/logo.svg"
+          alt="ISNAD Logo"
+          style={{ height: '80px' }}
+          className="mb-3"
+        />
+        <h1 className="display-4 fw-bold mb-3">Stand Against Media Deception</h1>
+        <p className="lead mx-auto" style={{ maxWidth: '600px' }}>
+          ISNAD empowers truth-seekers with tools to expose and counter false narratives
+        </p>
       </section>
 
       {/* Apps Section */}
-      <section className="py-16 container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-          Our Truth-Telling Tools
-        </h2>
-        
-        <div className="grid md:grid-cols-2 gap-8">
+      <section className="my-5">
+        <h2 className="text-center mb-4">Our Truth-Telling Tools</h2>
+        <div className="row">
           {apps.map(app => (
-            <div key={app.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-blue-500 p-6 text-white">
-                <h3 className="text-2xl font-bold">{app.name}</h3>
-                <p>{app.description}</p>
-              </div>
-              <div className="p-6">
-                <ul className="space-y-2">
-                  {app.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <svg className="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                  Learn More
-                </button>
+            <div key={app.id} className="col-md-6 mb-4">
+              <div className="card shadow-sm h-100">
+                <div className="card-header bg-primary text-white">
+                  <h3 className="card-title">{app.name}</h3>
+                </div>
+                <div className="card-body">
+                  <p>{app.description}</p>
+                  <ul className="list-group list-group-flush">
+                    {app.features.map((feature, i) => (
+                      <li key={i} className="list-group-item d-flex align-items-center">
+                        <svg
+                          className="bi bi-check-circle-fill text-success me-2"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M16 8A8 8 0 11.457 6.69l2.4 2.4a.5.5 0 00.708-.707l-2.4-2.4A7.978 7.978 0 018 0a8 8 0 018 8z" />
+                          <path d="M6.293 10.707a1 1 0 001.414 0l3-3a.5.5 0 00-.708-.708L7 9.293 6.354 8.646a.5.5 0 00-.708.708l.647.647z" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="btn btn-primary mt-3">Learn More</button>
+                </div>
               </div>
             </div>
           ))}
@@ -89,27 +92,27 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            Our Guardians of Truth
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {team.map((member, i) => (
-              <div key={i} className="bg-white p-6 rounded-lg shadow-md flex items-start">
-                <img 
-                  src={`/assets/team/team${i+1}.jpg`} 
+      <section className="my-5 bg-light p-4 rounded">
+        <h2 className="text-center mb-4">Our Guardians of Truth</h2>
+        <div className="row justify-content-center">
+          {team.map((member, i) => (
+            <div key={i} className="col-md-5 mb-4">
+              <div className="card h-100 shadow-sm d-flex flex-row align-items-center p-3">
+                {/* Replace src with your actual team images */}
+                <img
+                  src={`/assets/team/team${i + 1}.jpg`}
                   alt={member.name}
-                  className="w-20 h-20 rounded-full object-cover mr-6"
+                  className="rounded-circle me-3"
+                  style={{ width: '80px', height: '80px', objectFit: 'cover' }}
                 />
                 <div>
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-blue-600 mb-2">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <h4>{member.name}</h4>
+                  <p className="text-primary mb-1">{member.role}</p>
+                  <p className="mb-0">{member.bio}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
