@@ -67,9 +67,8 @@ export default function About() {
         <div className="card bg-secondary text-white h-100 shadow">
           <img
             src="../assets/manager1.jpg" // Replace with your actual image path
-            className="card-img-top"
+            className="img-fluid rounded-top" style={{ objectFit: 'cover', width: '100%', height: 'auto', maxHeight: '400px' }}
             alt="Manager 1"
-            style={{ objectFit: 'cover', height: '400px' }}
           />
           <div className="card-body">
             <h5 className="card-title">Hani1</h5>
@@ -83,9 +82,9 @@ export default function About() {
         <div className="card bg-secondary text-white h-100 shadow">
           <img
             src="../assets/manager2.jpg"
-            className="card-img-top"
+            className="img-fluid rounded-top" style={{ objectFit: 'cover', width: '100%', height: 'auto', maxHeight: '400px' }}
             alt="Manager 2"
-            style={{ objectFit: 'cover', height: '400px' }}
+           
           />
           <div className="card-body">
             <h5 className="card-title">Hani2</h5>
@@ -98,10 +97,9 @@ export default function About() {
         <div className="card bg-secondary text-white h-100 shadow">
           <img
             src="../assets/manager2.jpg"
-            className="card-img-top"
+            className="img-fluid rounded-top" style={{ objectFit: 'cover', width: '100%', height: 'auto', maxHeight: '400px' }}
             alt="Manager 2"
-            style={{ objectFit: 'cover', height: '400px' }}
-          />
+                     />
           <div className="card-body">
             <h5 className="card-title">Hani3</h5>
             <p className="card-text">Manager3</p>
