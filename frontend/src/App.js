@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     axios.get('https://isnadquickwebsite.onrender.com/api')
-      .then(res => setBackendStatus('Backend Connected ✓'))
+      .then(res => setBackendStatus('Back-End Connected ✓'))
       .catch(() => setBackendStatus('Offline (Standalone Mode)'));
   }, []);
 
