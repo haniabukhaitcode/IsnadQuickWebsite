@@ -1,0 +1,38 @@
+.hero-logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem auto;
+
+  box-shadow:
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),   /* highlight */
+    inset -2px -2px 5px rgba(0, 0, 0, 0.4),       /* shadow */
+    0 4px 8px rgba(0, 0, 0, 0.4);                 /* outer shadow */
+}
+
+.hero-logo-wrapper {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    inset 4px 4px 10px rgba(255,255,255,0.2),
+    inset -4px -4px 10px rgba(0,0,0,0.3),
+    0 4px 6px rgba(0,0,0,0.3);
+}
+
+.hero-logo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.888), rgba(0,0,0,0.2));
+  mix-blend-mode: overlay;
+}
+
+.imgFluid{
+    height: 400px;
+    width:400px;
+}

@@ -11,7 +11,7 @@ export default function About() {
         <div className="row mb-5 align-items-center">
           <div className="col-md-6">
             <img
-              src="/assets/about-story.jpg"
+              src="../assets/about-story.jpg"
               alt="Our Story"
               className="img-fluid rounded shadow"
             />
@@ -31,7 +31,7 @@ export default function About() {
         <div className="row mb-5 align-items-center flex-md-row-reverse">
           <div className="col-md-6">
             <img
-              src="/assets/ceo.jpg"
+              src="../assets/ceo.jpg"
               alt="Founder and CEO"
               className="img-fluid rounded-circle shadow"
               style={{ width: '200px', height: '200px', objectFit: 'cover' }}
@@ -64,14 +64,14 @@ export default function About() {
       <div className="col-md-4 mb-4">
         <div className="card bg-secondary text-white h-100 shadow">
           <img
-            src="/assets/team/manager1.jpg" // Replace with your actual image path
+            src="../assets/manager1.jpg" // Replace with your actual image path
             className="card-img-top"
             alt="Manager 1"
-            style={{ objectFit: 'cover', height: '300px' }}
+            style={{ objectFit: 'cover', height: '400px' }}
           />
           <div className="card-body">
-            <h5 className="card-title">Omar Zain</h5>
-            <p className="card-text">Founder & CEO</p>
+            <h5 className="card-title">Hani1</h5>
+            <p className="card-text">Manager1</p>
           </div>
         </div>
       </div>
@@ -80,29 +80,29 @@ export default function About() {
       <div className="col-md-4 mb-4">
         <div className="card bg-secondary text-white h-100 shadow">
           <img
-            src="/assets/team/manager2.jpg"
+            src="../assets/manager2.jpg"
             className="card-img-top"
             alt="Manager 2"
-            style={{ objectFit: 'cover', height: '300px' }}
+            style={{ objectFit: 'cover', height: '400px' }}
           />
           <div className="card-body">
-            <h5 className="card-title">Fatima Yousri</h5>
-            <p className="card-text">CTO & AI Ethics Lead</p>
+            <h5 className="card-title">Hani2</h5>
+            <p className="card-text">Manager2</p>
           </div>
         </div>
       </div>
-      {/* Manager 2 */}
+      {/* Manager 3 */}
       <div className="col-md-4 mb-4">
         <div className="card bg-secondary text-white h-100 shadow">
           <img
-            src="/assets/team/manager2.jpg"
+            src="../assets/manager2.jpg"
             className="card-img-top"
             alt="Manager 2"
-            style={{ objectFit: 'cover', height: '300px' }}
+            style={{ objectFit: 'cover', height: '400px' }}
           />
           <div className="card-body">
-            <h5 className="card-title">Fatima Yousri</h5>
-            <p className="card-text">CTO & AI Ethics Lead</p>
+            <h5 className="card-title">Hani3</h5>
+            <p className="card-text">Manager3</p>
           </div>
         </div>
       </div>

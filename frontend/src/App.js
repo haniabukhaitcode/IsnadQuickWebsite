@@ -39,7 +39,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-dark text-white py-4 mt-auto">
         <div className="container text-center">
-          <img src="/logo.svg" alt="ISNAD" style={{ height: '48px' }} className="mb-3" />
+          <img src="../assets/logo.png" alt="ISNAD" style={{ height: '48px' }} className="mb-3" />
           <p>Standing between you and the disinformation machine</p>
           <div>
             <Link to="/about" className="mx-3 text-decoration-none text-white">

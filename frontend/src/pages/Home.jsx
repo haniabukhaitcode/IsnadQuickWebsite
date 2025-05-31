@@ -6,31 +6,32 @@ const apps = [
     id: 1,
     name: "Bugghunter",
     description: "Tracks and flags repeat misinformation offenders and alerts users.",
-    image: "/assets/apps/bugghunter.jpg"
+    image: "../assets/bugghunter.jpg"
   },
   {
     id: 2,
-    name: "TruthLens",
+    name: "Isnad Influencer",
     description: "AI-powered tool analyzing media bias and manipulation.",
-    image: "/assets/apps/truthlens.jpg"
+    image: "../assets/influencer.jpg"
+    
   },
   {
     id: 3,
-    name: "FactBurst",
+    name: "TruthLens",
     description: "Crowdsourced fact-checking platform powered by our volunteers.",
-    image: "/assets/apps/factburst.jpg"
+    image: "../assets/truthlens.jpg"
   },
   {
     id: 4,
     name: "SourceGuard",
     description: "Monitors source credibility and detects narrative changes.",
-    image: "/assets/apps/sourceguard.jpg"
+    image: "../assets/sourceguard.jpg"
   },
   {
     id: 5,
     name: "BiasBuster",
     description: "Detects ideological tilt in news and social content.",
-    image: "/assets/apps/biasbuster.jpg"
+    image: "../assets/biasbuster.jpg"
   },
 ];
 
@@ -39,7 +40,9 @@ export default function Home() {
     <div className="bg-dark text-light py-5">
       {/* Hero Section */}
       <section className="hero-section text-center">
-        <img src="/logo.svg" alt="ISNAD Logo" className="hero-logo mb-3" />
+        <div className="hero-logo-wrapper w-24 h-24 mx-auto mb-3">
+        <img src="../assets/logo.png" alt="ISNAD Logo" className="hero-logo mb-3" />
+        </div>
         <h1 className="hero-title">Stand Against Media Deception</h1>
         <p className="hero-subtitle">
           ISNAD empowers truth-seekers with tools to expose and counter false narratives.
@@ -52,7 +55,7 @@ export default function Home() {
         {apps.map((app, i) => (
           <div key={app.id} className="row align-items-center mb-5 app-block">
             <div className={`col-md-6 ${i % 2 === 0 ? '' : 'order-md-2'}`}>
-              <img src={app.image} alt={app.name} className="img-fluid rounded shadow" />
+              <img src={app.image} alt={app.name} className="imgFluid" />
             </div>
             <div className="col-md-6">
               <h3 className="app-name text-danger">{app.name}</h3>
