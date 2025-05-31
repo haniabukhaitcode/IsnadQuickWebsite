@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from './components/Header';
+import './App.css'
 
 function App() {
   const [backendStatus, setBackendStatus] = useState('Checking...');
@@ -20,7 +21,7 @@ function App() {
   return (
     <Router>
       {/* Status Bar */}
-      <div className="bg-dark text-white text-center py-1 small">
+      <div className="xxx">
         System Status: {backendStatus}
       </div>
 
@@ -28,7 +29,7 @@ function App() {
       <Header />
 
       {/* Main content container */}
-      <div className="container my-5">
+      <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

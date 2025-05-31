@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm">
       <div className="container">
         <Link className="navbar-brand" to="/">
           ISNAD
