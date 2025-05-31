@@ -7,11 +7,14 @@ import About from './pages/About';
 function App() {
   const [backendStatus, setBackendStatus] = useState('Checking...');
 
-  useEffect(() => {
-    axios.get('https://isnadquickwebsite.onrender.com/api')
-      .then(res => setBackendStatus('Back-End Connected ✓'))
-      .catch(() => setBackendStatus('Offline (Standalone Mode)'));
-  }, []);
+useEffect(() => {
+  axios.get('https://isnadquickwebsite.onrender.com/api')
+    .then(res => {
+      const { message, status } = res.data;
+      setBackendStatus(`${message} Status: (${status}) ✓`);
+    })
+    .catch(() => setBackendStatus('Offline (Standalone Mode)'));
+}, []);
 
   return (
     <Router>
