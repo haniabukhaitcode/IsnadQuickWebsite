@@ -40,9 +40,11 @@ export default function About() {
           <div className="col-md-6">
             <h3 className="text-info">Meet the Founder</h3>
             <p>
-              Omar Zain, a former investigative journalist with 15 years of experience, founded ISNAD
-              after witnessing how coordinated misinformation efforts shaped public opinion. He now
-              leads a growing team committed to ethical tech and transparency.
+             Ezz Eldin Dwidar is an Egyptian film director and screenwriter,
+              born on March 30, 1980, in Damietta, Egypt. 
+              He earned a Bachelor's degree in Art Education in 2000. 
+              Dwidar began his career directing television advertisements 
+              before transitioning to filmmaking.
             </p>
           </div>
         </div>
