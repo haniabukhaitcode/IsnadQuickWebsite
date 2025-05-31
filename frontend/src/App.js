@@ -6,7 +6,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api')
+        axios.get('https://isnadquickwebsite.onrender.com/api')
       .then(res => {
         setMessage(res.data.message);
         setLoading(false); //if data recieved no loading.
