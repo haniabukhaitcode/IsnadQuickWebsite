@@ -1,0 +1,26 @@
+/* Managers Section */
+.manager-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manager-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ensure consistent card heights */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+/* For very small screens (optional) */
+@media (max-width: 400px) {
+  .row-cols-sm-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
