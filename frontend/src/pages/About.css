@@ -10,7 +10,7 @@
   background: #2c2c2c;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -41,16 +41,16 @@
   .manager-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  
+
   .manager-card img {
-    height: 200px;
+    height: 250px;
   }
-  
+
   .manager-info {
     padding: 10px;
     font-size: 14px;
   }
-  
+
   .manager-info h5 {
     font-size: 16px;
   }
