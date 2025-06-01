@@ -42,7 +42,7 @@ export default function Home() {
         <div className="hero-logo-wrapper">
           <img src="../assets/logo.png" alt="ISNAD Logo" className="hero-logo" />
         </div>
-        <h1 className="hero-title">Stand Against Media Deception</h1>
+        <h1 className="hero-title">Stand Against Media Deceptions</h1>
         <p className="hero-subtitle">
           ISNAD empowers truth-seekers with tools to expose and counter false narratives.
         </p>
