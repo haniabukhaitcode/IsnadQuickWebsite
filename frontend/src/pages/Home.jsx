@@ -19,7 +19,7 @@ const apps = [
     id: 3,
     name: "TruthLens",
     description: "Crowdsourced fact-checking platform powered by our volunteers.",
-    image: "../assets/truthlens.jpg"
+    image: "../assets/truth.jpg"
   },
   {
     id: 4,
