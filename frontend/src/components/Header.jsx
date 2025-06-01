@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-dark">
+      <div className="container">
         {/* Brand / Logo */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img src="/assets/logo.png" alt="ISNAD" style={{ height: '36px', marginRight: '10px' }} />
@@ -26,7 +26,7 @@ export default function Header() {
 
         {/* Collapsed links */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto text-center">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
             </li>

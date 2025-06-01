@@ -4,13 +4,14 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from './components/Header';
-import './App.css'
-
+import Footer from './components/Footer';
+import './App.css';
 function App() {
   const [backendStatus, setBackendStatus] = useState('Checking...');
 
   useEffect(() => {
-    axios.get('https://isnadquickwebsite.onrender.com/api')
+    axios
+      .get('https://isnadquickwebsite.onrender.com/api')
       .then(res => {
         const { message, status } = res.data;
         setBackendStatus(`${message} Status: (${status}) ✓`);
@@ -20,40 +21,36 @@ function App() {
 
   return (
     <Router>
-      {/* Status Bar */}
-      <div className="xxx">
-        System Status: {backendStatus}
+      {/* Status Bar - Full width background */}
+      <div className="main">
+        <div className="container">
+          <div className="status-bar">System Status: {backendStatus}</div>
+        </div>
       </div>
-
-      {/* Header */}
-      <Header />
-
-      {/* Main content container */}
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-dark text-white py-4 mt-auto">
-        <div className="container text-center">
-          <img src="../assets/logo.png" alt="ISNAD" style={{ height: '48px' }} className="mb-3" />
-          <p>Standing between you and the disinformation machine</p>
-          <div>
-            <Link to="/about" className="mx-3 text-decoration-none text-white">
-              Our Story
-            </Link>
-            <a href="#" className="mx-3 text-decoration-none text-white">
-              Join Us
-            </a>
-            <a href="#" className="mx-3 text-decoration-none text-white">
-              Contact
-            </a>
+      {/* Header - Full width background */}
+      <div className="main">
+        <div className="container">
+          <div className="header-wrapper">
+            <Header />
           </div>
         </div>
-      </footer>
+      </div>
+      {/* Main content */}
+
+      <main className="main-content">
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+      </main>
+      <div className="main">
+        <div className="container">
+          {/* Footer */}
+          <Footer />
+        </div>
+      </div>
     </Router>
   );
 }
