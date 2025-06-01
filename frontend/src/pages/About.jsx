@@ -64,55 +64,37 @@ export default function About() {
 <section className="bg-dark text-white py-5">
   <div className="container">
     <h2 className="text-center mb-4">Meet Our Managers</h2>
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div className="manager-grid">
       {/* Manager 1 */}
-      <div className="col">
-        <div className="card h-100 bg-secondary text-white shadow">
-          <div className="ratio ratio-1x1">
-            <img
-              src="../assets/manager1.jpg"
-              className="card-img-top object-fit-cover"
-              alt="Manager 1"
-            />
-          </div>
-          <div className="card-body text-center">
-            <h5 className="card-title">Hani1</h5>
-            <p className="card-text">Manager1</p>
-          </div>
+      <div className="manager-card">
+        <div className="card-image">
+          <img src="../assets/manager1.jpg" alt="Manager 1" />
+        </div>
+        <div className="card-content">
+          <h5>Hani1</h5>
+          <p>Manager1</p>
         </div>
       </div>
 
       {/* Manager 2 */}
-      <div className="col">
-        <div className="card h-100 bg-secondary text-white shadow">
-          <div className="ratio ratio-1x1">
-            <img
-              src="../assets/manager2.jpg"
-              className="card-img-top object-fit-cover"
-              alt="Manager 2"
-            />
-          </div>
-          <div className="card-body text-center">
-            <h5 className="card-title">Hani2</h5>
-            <p className="card-text">Manager2</p>
-          </div>
+      <div className="manager-card">
+        <div className="card-image">
+          <img src="../assets/manager2.jpg" alt="Manager 2" />
+        </div>
+        <div className="card-content">
+          <h5>Hani2</h5>
+          <p>Manager2</p>
         </div>
       </div>
 
       {/* Manager 3 */}
-      <div className="col">
-        <div className="card h-100 bg-secondary text-white shadow">
-          <div className="ratio ratio-1x1">
-            <img
-              src="../assets/manager3.jpg"
-              className="card-img-top object-fit-cover"
-              alt="Manager 3"
-            />
-          </div>
-          <div className="card-body text-center">
-            <h5 className="card-title">Hani3</h5>
-            <p className="card-text">Manager3</p>
-          </div>
+      <div className="manager-card">
+        <div className="card-image">
+          <img src="../assets/manager3.jpg" alt="Manager 3" />
+        </div>
+        <div className="card-content">
+          <h5>Hani3</h5>
+          <p>Manager3</p>
         </div>
       </div>
     </div>
