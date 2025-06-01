@@ -34,14 +34,13 @@ const apps = [
     image: "../assets/biasbuster.jpg"
   },
 ];
-
 export default function Home() {
   return (
     <div className="bg-dark text-light py-5">
       {/* Hero Section */}
-      <section className="hero-section text-center">
-        <div className="hero-logo-wrapper w-24 h-24 mx-auto mb-3">
-        <img src="../assets/logo.png" alt="ISNAD Logo" className="hero-logo mb-3" />
+      <section className="hero-section text-center mb-5">
+        <div className="hero-logo-wrapper">
+          <img src="../assets/logo.png" alt="ISNAD Logo" className="hero-logo" />
         </div>
         <h1 className="hero-title">Stand Against Media Deception</h1>
         <p className="hero-subtitle">
@@ -50,23 +49,23 @@ export default function Home() {
       </section>
 
       {/* Apps Showcase */}
-      <section className="apps-section container py-5">
-        <h2 className="section-title text-center mb-5">Our Integrity Tools</h2>
-        {apps.map((app, i) => (
-          <div key={app.id} className="row align-items-center mb-5 app-block">
-            <div className={`col-md-6 ${i % 2 === 0 ? '' : 'order-md-2'}`}>
-              <img src={app.image} alt={app.name} className="imgFluid" />
+      <section className="container">
+        <h2 className="text-center mb-5">Our Integrity Tools</h2>
+        <div className="apps-container">
+          {apps.map((app, index) => (
+            <div key={app.id} className={`app-card ${index % 2 === 0 ? '' : 'reverse'}`}>
+              <div className="app-image">
+                <img src={app.image} alt={app.name} />
+              </div>
+              <div className="app-content">
+                <h3 className="text-danger">{app.name}</h3>
+                <p>{app.description}</p>
+                <button className="btn btn-outline-danger">Learn More</button>
+              </div>
             </div>
-            <div className="col-md-6">
-              <h3 className="app-name text-danger">{app.name}</h3>
-              <p className="app-description">{app.description}</p>
-              <button className="btn btn-outline-danger mt-2">Learn More</button>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
-    
-
     </div>
   );
 }

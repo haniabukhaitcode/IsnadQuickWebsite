@@ -1,5 +1,5 @@
-/* Managers Section - Guaranteed Working Solution */
-.manager-grid {
+/* Managers Section - Fixed Working Solution */
+.manager-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
@@ -18,35 +18,47 @@
   transform: translateY(-5px);
 }
 
-.card-image {
+.manager-card img {
   width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-.manager-grid {
-  display: grid !important;
-}
-.card-image img {
-  width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
 
-.card-content {
+.manager-info {
   padding: 15px;
   text-align: center;
   color: white;
 }
 
-.card-content h5 {
+.manager-info h5 {
   margin-bottom: 5px;
   color: #0dcaf0;
 }
 
-/* For very small screens */
-@media (max-width: 400px) {
-  .manager-grid {
+/* Mobile devices (portrait) */
+@media (max-width: 767px) {
+  .manager-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .manager-card img {
+    height: 200px;
+  }
+  
+  .manager-info {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .manager-info h5 {
+    font-size: 16px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 350px) {
+  .manager-container {
     grid-template-columns: 1fr;
   }
 }

@@ -64,13 +64,11 @@ export default function About() {
 <section className="bg-dark text-white py-5">
   <div className="container">
     <h2 className="text-center mb-4">Meet Our Managers</h2>
-    <div className="manager-grid">
+    <div className="manager-container">
       {/* Manager 1 */}
       <div className="manager-card">
-        <div className="card-image">
-          <img src="../assets/manager1.jpg" alt="Manager 1" />
-        </div>
-        <div className="card-content">
+        <img src="../assets/manager1.jpg" alt="Manager 1" />
+        <div className="manager-info">
           <h5>Hani1</h5>
           <p>Manager1</p>
         </div>
@@ -78,10 +76,8 @@ export default function About() {
 
       {/* Manager 2 */}
       <div className="manager-card">
-        <div className="card-image">
-          <img src="../assets/manager2.jpg" alt="Manager 2" />
-        </div>
-        <div className="card-content">
+        <img src="../assets/manager2.jpg" alt="Manager 2" />
+        <div className="manager-info">
           <h5>Hani2</h5>
           <p>Manager2</p>
         </div>
@@ -89,10 +85,8 @@ export default function About() {
 
       {/* Manager 3 */}
       <div className="manager-card">
-        <div className="card-image">
-          <img src="../assets/manager3.jpg" alt="Manager 3" />
-        </div>
-        <div className="card-content">
+        <img src="../assets/manager3.jpg" alt="Manager 3" />
+        <div className="manager-info">
           <h5>Hani3</h5>
           <p>Manager3</p>
         </div>

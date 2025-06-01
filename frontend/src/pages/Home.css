@@ -1,15 +1,14 @@
+/* Hero Section */
 .hero-logo {
   width: 96px;
   height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  margin: 0 auto 1rem auto;
-
+  margin-bottom: 1rem;
   box-shadow:
-    inset 2px 2px 5px rgba(255, 255, 255, 0.3),   /* highlight */
-    inset -2px -2px 5px rgba(0, 0, 0, 0.4),       /* shadow */
-    0 4px 8px rgba(0, 0, 0, 0.4);                 /* outer shadow */
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-logo-wrapper {
@@ -32,6 +31,84 @@
   mix-blend-mode: overlay;
 }
 
-.imgFluid{
-    height: 400px;
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0dcaf0;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Apps Section */
+.apps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 1rem;
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(44, 44, 44, 0.7);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+}
+
+.app-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.app-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.app-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.app-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.app-content h3 {
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-card,
+  .app-card.reverse {
+    flex-direction: column;
+  }
+  
+  .app-image {
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
 }
